@@ -3,6 +3,7 @@ const{ userRouter } = require('./routes/user')
 const{ courseRouter } = require('./routes/course')
 const{ adminRouter } = require('./routes/admin')
 const app = express();
+const { courseSchema } = require('./db')
 
 // prefixing of backend happend here
 app.use('/api/v1/user', userRouter)
