@@ -43,7 +43,7 @@ adminRouter.post("/signin", async (req, res) => {
     }   
 })
 
-adminRouter.post('/course', adminMiddleware, async (req, res) => {
+adminRouter.post("/course", adminMiddleware, async (req, res) => {
     const adminId = req.userId;
     const { title, description, imageUrl, price } = req.body;
 
@@ -81,7 +81,7 @@ adminRouter.put("/course", adminMiddleware, async(req, res) => {
     })
 });
 
-adminRouter.get('/course/bulk', adminMiddleware, async(req, res) => {
+adminRouter.get("/course/bulk", adminMiddleware, async(req, res) => {
     const adminId = req.userId
     const course = await courseModel.find({
         createrId : adminId
